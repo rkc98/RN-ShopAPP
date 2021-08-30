@@ -1,12 +1,12 @@
 import React from 'react'
 import { Button, Image, StyleSheet, Text, View } from 'react-native'
 
-const ProductItem = ({imageUrl,title,price,onViewDetails,onAddToCart}) => {
-    console.log(imageUrl,title,price)
+const ProductItem = ({image,title,price,onViewDetails,onAddToCart}) => {
+    console.log(image,title,price)
     return (
         <View style={styles.product}>
             <Image source={{
-                uri:imageUrl
+                uri:image
             }} style={styles.image} />
             <Text style={styles.title}>
                 {title}
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     },
     image:{
         width:"100%",
-        height:'60'
+        height:'60%'
     },
     title:{
         fontSize:18,
